@@ -64,3 +64,11 @@ var products = [
     }
 ];
  
+
+Vue.createApp({
+    data() {
+        return {
+            products: products
+        }
+    },
+}).mount('#app')
