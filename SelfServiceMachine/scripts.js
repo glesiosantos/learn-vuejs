@@ -71,4 +71,17 @@ Vue.createApp({
             products: products
         }
     },
+    methods: {
+        calculate: function () {
+            let total = 0
+
+            this.products.forEach(item => {
+              if (item.active) {
+                total += item.price * item.quantity 
+              } 
+            })
+
+            return total
+        }
+    },
 }).mount('#app')
